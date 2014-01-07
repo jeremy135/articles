@@ -1,0 +1,42 @@
+Sass - раcшифровывается как Syntactically Awesome Style Sheets, в вольном переводе синтаксически клевые страницы стиля.
+ По сути это препроцессор CSS, который имеет свой синтаксис, и компилится в CSS. За создание Sass должен быть благодарен ограниченности CSS. Все чего так не хватает в CSS, есть в Sass! Думаю в итоге все плюшки Sass окажутся и в CSS.
+
+Есть так скажем две разновидности Sass это не посредственно Sass и SCSS (Sassy CSS). Отличия между ними в синтаксисе у
+ Sass python подобный синтаксис с отступами, а в SCSS CSS подобный с фигурными скобками и точками с запятой.
+
+В данной статье будем рассматривать Sass.
+
+
+<h2>Переменные</h2>
+
+ Переменный задаются следующим образом:
+
+<code lang="sass">
+  $nav-code #abcdef
+</code>
+
+Могут быть локальными:
+
+<code lang="sass">
+nav
+    $width: 100px
+    width: $width
+    color: $nav-code
+</code>
+
+Могут быть вставлены как любое CSS свойство:
+
+<code>
+  $hightlight-color: #abcdef;
+
+  .select
+    border: 1px $hightlight-color solid
+</code>
+
+Так же могут быть вставлены в другую переменную:
+
+<code>
+  $hightlight-color: #abcdef
+  $hightlight-border: 1px $hightlight-color solid
+</code>
+
